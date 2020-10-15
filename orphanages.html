@@ -14,8 +14,40 @@
         <link rel="stylesheet" href="./styles/orphanages-page.css">
 
         <!-- Font -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap">
+
+        <!-- Leaflet -->
+        <link 
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""/>
+
+        <script
+            src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+
+        <!-- Script -->
+        <script src="./scripts/orphanages-page.js" defer></script>
     </head>
     <body>
+        <div id="orphanages-page">
+            <aside class="animate-right">
+                <header>
+                    <img src="./assets/images/map-marker.svg" alt="Marcador de localização do Happy">
+                    <h2>Escolha um orfanato no mapa</h2>
+                    <p>Muitas crianças estão esperando sua visita :)</p>
+                </header>
+                <footer>
+                    <strong>Pernambuco</strong>
+                    <p>Jaboatão dos Guararapes</p>
+                </footer>
+            </aside>
+            <div id="mapid" class="animate-appear"></div>
+            <a id="create-orphanage-button" href="./create-orphanage.html" title="Cadastrar orfanato">
+                <img src="./assets/images/plus.svg" alt="Cadastrar orfanato">
+            </a>
+        </div>
     </body>
 </html>
