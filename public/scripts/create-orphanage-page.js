@@ -51,4 +51,12 @@ const selectButton = event => {
     button.classList.add('active');
 
     document.querySelector('[name=weekends]').value = button.dataset.value;
-}
+};
+
+const validate = event => {
+    const locationInput = document.querySelector('.map-container input');
+    if (locationInput.value === '') {
+        event.preventDefault();
+        alert('Por favor, selecione no mapa a localização do orfanato!');
+    }
+};

@@ -46,7 +46,7 @@
                 </footer>
             </aside>
             <main class="animate-appear with-sidebar">
-                <form>
+                <form method="post" action="create-orphanage" onSubmit="validate(event)">
                     <fieldset>
                         <legend>Dados</legend>
                         <div class="map-container">
@@ -70,13 +70,13 @@
                         </div>
                         <div class="input-block">
                             <label for="whatsapp">Número de WhatsApp</label>
-                            <input id="whatsapp" name="whatsapp" required>
+                            <input id="whatsapp" name="whatsapp" type="tel" required>
                         </div>
                         <div class="input-block images">
                             <label for="images">Foto</label>
                             <div id="images" class="upload-images">
                                 <div class="new-image">
-                                    <input name="images" placeholder="Cole o link da imagem aqui" required>
+                                    <input name="images" type="url" placeholder="Cole o link da imagem aqui" required>
                                     <span onClick="removeImageField(event)">
                                         <img src="./assets/images/remove-image.svg" alt="Remover foto">
                                     </span>
